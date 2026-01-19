@@ -1,6 +1,9 @@
 name: pull-request-workflow
-on: 
+on:
+  push:
+    branches: [dev]
   pull_request:
+    types: [opened, synchronize, reopened]
   workflow_dispatch:
 
 jobs:
