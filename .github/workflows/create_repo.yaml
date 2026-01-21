@@ -35,19 +35,18 @@ jobs:
                     {
                         "attachments": [
                             {
-                            
                                 "pretext": "create repo result",
                                 "color": "28a745",
                                 "fields": [
                                     {
                                         "title": "create repo result ${{ steps.create-repo.outcome }}",
                                         "short": true,
-                                        "value": "${{ inputs.prefix }}"-"${{ inputs.name }}"
-                                    },
+                                        "value": "${{ inputs.prefix }}-${{ inputs.name }}"
+                                    }
                                 ]
                             }
                         ]
                     }
-             env:
+              env:
                 SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
                 SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
