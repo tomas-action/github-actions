@@ -42,9 +42,11 @@ jobs:
                                 "pretext": "issue alert message",
                                 "color": "28a745",
                                 "fields": [
-                                    "title": "Level : ${{ needs.get-keyword.outputs.level }}",
-                                    "short": true,
-                                    "value": "issue url : ${{ github.event.issue.html_url }}"
+                                    {
+                                        "title": "Level : ${{ needs.get-keyword.outputs.level }}",
+                                        "short": true,
+                                        "value": "issue url : ${{ github.event.issue.html_url }}"
+                                    }
                                 ]
                             }
                         ]
